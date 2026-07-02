@@ -32,7 +32,7 @@ def chat():
     try:
         # Call the Gemini 2.5 Flash model
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.5-flash-lite',
             contents=user_message,
         )
         return jsonify({"reply": response.text})
